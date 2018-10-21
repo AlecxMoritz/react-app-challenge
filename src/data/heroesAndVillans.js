@@ -65,7 +65,7 @@ const data = [
     {
         hero: false,
         name: 'Loki',
-        realName: 'Laufeyson',
+        realName: 'Loki Laufeyson',
         universe: 'Marvel',
         power: 'Superhuman strength, speed, durability and longevity. Master of manipulation and deceit.'
     },
