@@ -12,15 +12,14 @@ export default class Main extends React.Component {
         this.toggleVillain = this.toggleVillain.bind(this);
     }
 
-    async toggleHero(e) {
+    async toggleHero() {
         await this.setState({
             mode: 'hero'
         })
         this.mapData();
     }
 
-
-    async toggleVillain(e) {
+    async toggleVillain() {
         await this.setState({
             mode: 'villain'
         })
