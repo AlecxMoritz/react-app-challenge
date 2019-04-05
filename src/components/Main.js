@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import HeroButton from './ui/HeroButton';
 import VillainButton from './ui/VillainButton';
 import data from '../data/heroesAndVillans';
@@ -20,7 +20,10 @@ export default class Main extends Component {
     }
 
     async toggleVillain() {
-        await this.state = 'villain'
+        await this.setState({
+            mode : 'villain'
+        })
+
         this.mapData();
     }
 
@@ -29,20 +32,19 @@ export default class Main extends Component {
         if (this.state.mode === 'hero') {
             mapData = data.filter(character => character.hero === true);
         } else if (this.state.mode === 'villain') {
-            mapData = Data.filter(character => character.hero === false);
+            mapData = data.filter(character => character.hero === false);
         } else {
             mapData = []
         }
 
-        let renderData = mapData.map(character, index => {
+        let renderData = mapData.map((character, index) => {
             return (
+                
                 <div key={index} className="character-display">
                     <h2>{character.name}</h2>
                     <h6>Real Name: {character.realName}</h6>
                     <p>Universe: {character.universe}</p>
                     <p>Powers:{character.power}</p>
-                </div>
-                <div>
                     <p>Heroes or Villains?</p>
                 </div>                
             )
@@ -53,7 +55,7 @@ export default class Main extends Component {
         });
     }
 
-    componentDidMount() {
+    render() {
         return (
             <div>
                 <div>

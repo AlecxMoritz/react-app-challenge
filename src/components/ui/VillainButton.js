@@ -7,3 +7,5 @@ const VillainButton = (props) => {
         </div>
     )
 }
+
+export default VillainButton;
