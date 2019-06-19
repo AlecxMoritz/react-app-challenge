@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Main from './components/Main';
-class App extends Component {
-
-  render() {
-    return (
-      <div className="App">
-      <h1 className="title" style={leftIndent}>Heroes and Villains</h1>
-      <Main />
-      </div>
-    );
-  }
-}
 
 let leftIndent = {
   marginLeft: '1em'
 }
+
+function App() {
+    return (
+      <div className="App">
+        <h1 className="title" style={leftIndent}>Heroes and Villains</h1>
+        <Main />
+      </div>
+    );
+}
+
 
 export default App;

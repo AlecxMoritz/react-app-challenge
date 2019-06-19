@@ -2,9 +2,9 @@ import React from 'react';
 
 const VillainButton = (props) => {
     return (
-        <div>
+        <React.Fragment>
             <button className="app-btn" onClick={props.toggleVillain}>Villains</button>
-        </div>
+        </React.Fragment>
     )
 }
 
