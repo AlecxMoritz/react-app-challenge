@@ -7,5 +7,3 @@ const VillainButton = (props) => {
         </React.Fragment>
     )
 }
-
-export default VillainButton;

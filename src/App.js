@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Main from './components/Main';
+import Main from './Main';
 
 let leftIndent = {
   marginLeft: '1em'
@@ -9,7 +9,7 @@ let leftIndent = {
 function App() {
     return (
       <div className="App">
-        <h1 className="title" style={leftIndent}>Heroes and Villains</h1>
+        <h1 className="title" style='leftIndent'>Heroes and Villains</h1>
         <Main />
       </div>
     );

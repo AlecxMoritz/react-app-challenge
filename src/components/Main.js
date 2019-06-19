@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React,  useState from 'react';
 import HeroButton from './ui/HeroButton';
 import VillainButton from './ui/VillainButton';
 import data from '../data/heroesAndVillans';
@@ -16,12 +16,15 @@ const Main = () => {
     };
     
     const toggleVillain = () => {
-        let villains = data.filter(character => character.hero === false);
+        let villains = data.filter(character) => character.hero === false);
         setCharacters(villains);
     };
 
     return (
-        <div>
+        <div>Hello React</div>
+    )
+
+    return (
             <div>
                 <div className="btns" style={leftIndent}>
                     <HeroButton toggleHero={ toggleHero } />
@@ -31,9 +34,9 @@ const Main = () => {
             { characters.length < 1 ? <p>Click a button to see some characters!</p> : null }
             <div className="data-display">
                 {
-                    characters.map((character, index) => {
+                    characters.map((Character, index => {
                         return (
-                            <div key={index} className="character-display">
+                            <div className="character-display">
                                 <h2>{character.name}</h2>
                                 <h6>Real Name: {character.realName}</h6>
                                 <p>Universe: {character.universe}</p>
@@ -43,7 +46,6 @@ const Main = () => {
                     })
                 }
             </div>
-        </div>
     )
 }
 
